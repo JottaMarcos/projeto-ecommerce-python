@@ -7,7 +7,7 @@ import re
 DB_CONFIG = {
     "host": "aws-1-us-east-1.pooler.supabase.com",
     "user": "postgres.ltaxntxapuekaguwuylj",
-    "password": "SUA_SENHA_AQUI", # Lembre de trocar pela sua senha
+    "password": "*****", 
     "database": "postgres",
     "port": "6543"
 }
@@ -46,4 +46,5 @@ def povoar_banco():
     conn.close()
 
 if __name__ == "__main__":
+
     povoar_banco()
