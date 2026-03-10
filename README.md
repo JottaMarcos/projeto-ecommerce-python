@@ -71,7 +71,7 @@ Nesta seção, apresento os resultados finais consolidados no Power BI, fruto da
 
 Foco no monitoramento de KPIs macro: Receita Bruta, Volume de Transações e Lucro Líquido consolidado.
 
-2. ![Performance Operacional e Despesas](Dashboard_python2.png)
+2. ![Performance Operacional e Despesas](Dashboard_python20.png)
 
 
 Análise de custos fixos vs. variáveis, ranking de rentabilidade por estado e eficiência por categoria de produto.
