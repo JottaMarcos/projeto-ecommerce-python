@@ -9,7 +9,7 @@ CHAT_ID = "6201145010"
 DB_CONFIG = {
     "host": "aws-1-us-east-1.pooler.supabase.com",
     "user": "postgres.ltaxntxapuekaguwuylj",
-    "password": "Jottamarcos07", 
+    "password": "*****", 
     "database": "postgres",
     "port": "6543"
 }
@@ -63,5 +63,6 @@ def executar_fluxo_completo():
 
     except Exception as e:
         print(f"❌ Erro na operação: {e}")
+
 
 executar_fluxo_completo()
