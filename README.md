@@ -59,3 +59,24 @@ Script de estresse para povoar o banco com milhares de transações reais.
 Destaque Técnico: 
 
 Foi através deste script que geramos os R$ 53,25 Milhões em faturamento, provando que a solução é escalável para grandes volumes de dados.
+
+
+📊 Demonstração Visual (Dashboards)
+
+
+Nesta seção, apresento os resultados finais consolidados no Power BI, fruto da integração entre o banco de dados Supabase e os scripts Python de carga massiva.
+
+1. ![Visão Geral Financeira](Dashboard_python1.png)
+
+
+Foco no monitoramento de KPIs macro: Receita Bruta, Volume de Transações e Lucro Líquido consolidado.
+
+2. ![Performance Operacional e Despesas](Dashboard_python2.png)
+
+
+Análise de custos fixos vs. variáveis, ranking de rentabilidade por estado e eficiência por categoria de produto.
+
+3. ![Detalhamento e Registro de Vendas](Dashboard_python3.png)
+
+
+Visão granular dos dados, exibindo a integridade de cada registro transacional processado pelo sistema.
