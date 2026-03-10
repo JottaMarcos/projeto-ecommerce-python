@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 DB_CONFIG = {
     "host": "aws-1-us-east-1.pooler.supabase.com",
     "user": "postgres.ltaxntxapuekaguwuylj",
-    "password": "Jottamarcos07", # <--- COLOQUE SUA SENHA AQUI
+    "password": "*****", # <--- COLOQUE SUA SENHA AQUI
     "database": "postgres",
     "port": "6543"
 }
@@ -46,4 +46,5 @@ def gerar_10k_vendas():
         print(f"❌ Erro na carga: {e}")
 
 if __name__ == "__main__":
+
     gerar_10k_vendas()
