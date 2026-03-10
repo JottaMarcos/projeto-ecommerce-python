@@ -15,20 +15,27 @@ Aqui está a explicação técnica de cada script desenvolvido no projeto:
 
 1. ![Modelagem do Banco](estrutura_banco.sql)
 Função:
+
 Define a arquitetura das tabelas (Produtos, Filiais, Vendas) no Supabase.
 
 Destaque Técnico: 
+
 Implementação de chaves primárias e estrangeiras para garantir a integridade referencial, permitindo que o Power BI identifique os relacionamentos automaticamente.
 
 2. ![Povoamento Inteligente](povoamento_dados.py)
-Função: Script Python responsável por alimentar as tabelas dimensionais (Produtos e Filiais).
+Função:
+
+Script Python responsável por alimentar as tabelas dimensionais (Produtos e Filiais).
 
 Destaque Técnico: 
+
 Garante que cada produto tenha atributos específicos (preço, categoria) e cada filial tenha seus custos fixos (aluguel, manutenção) devidamente registrados para o cálculo de margem posterior.
 
 3. ![Motor de Vendas e Métricas](sistema_jotta_vendas.py)
 
-Função: O "cérebro" da operação. Integra as regras de negócio das métricas de e-commerce com o fluxo de vendas presenciais.
+Função: 
+
+O "cérebro" da operação. Integra as regras de negócio das métricas de e-commerce com o fluxo de vendas presenciais.
 
 
 Destaque Técnico: 
@@ -36,7 +43,9 @@ Cálculo dinâmico de impostos e taxas de entrega antes da carga no banco de dad
 
 4. ![Simulação de Escala](carga_massiva.py)
 Função:
+
 Script de estresse para povoar o banco com milhares de transações reais.
 
 Destaque Técnico: 
+
 Foi através deste script que geramos os R$ 53,25 Milhões em faturamento, provando que a solução é escalável para grandes volumes de dados.
