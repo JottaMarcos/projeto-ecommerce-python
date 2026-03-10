@@ -1,14 +1,24 @@
-🚀 Sistema Jotta: Arquitetura de BI e Engenharia de Dados
+🚀 Sistema Jotta: Arquitetura de BI e Engenharia de Dados:
+
+
 Este projeto apresenta uma solução completa de dados, desde a modelagem de banco de dados relacional e ingestão automatizada até a entrega de dashboards executivos de alta fidelidade. O foco principal foi a resolução de inconsistências financeiras e a entrega de KPIs de rentabilidade real.
 
 🛠️ Tecnologias Utilizadas
-Banco de Dados: Supabase (PostgreSQL)
+Banco de Dados: 
 
-Linguagem: Python (Pandas, SQLAlchemy)
+Supabase (PostgreSQL)
 
-Visualização: Power BI (DAX, Star Schema)
+Linguagem: 
 
-Automação: Scripts de Carga Massiva
+Python (Pandas, SQLAlchemy)
+
+Visualização: 
+
+Power BI (DAX, Star Schema)
+
+Automação: 
+
+Scripts de Carga Massiva
 
 Infraestrutura e Engenharia (Back-end)
 Aqui está a explicação técnica de cada script desenvolvido no projeto:
