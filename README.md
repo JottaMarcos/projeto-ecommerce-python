@@ -1,82 +1,119 @@
-🚀 Sistema Jotta: Arquitetura de BI e Engenharia de Dados:
+<div align="center">
 
+# 🚀 Sistema Jotta — Arquitetura de BI e Engenharia de Dados
 
-Este projeto apresenta uma solução completa de dados, desde a modelagem de banco de dados relacional e ingestão automatizada até a entrega de dashboards executivos de alta fidelidade. O foco principal foi a resolução de inconsistências financeiras e a entrega de KPIs de rentabilidade real.
+**Solução completa de dados: da modelagem relacional ao dashboard executivo**
 
-🛠️ Tecnologias Utilizadas
-Banco de Dados: 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-Supabase (PostgreSQL)
+</div>
 
-Linguagem: 
+---
 
-Python (Pandas, SQLAlchemy)
+## 🎯 O Problema de Negócio
 
-Visualização: 
+Empresas de e-commerce frequentemente enfrentam **inconsistências financeiras** — faturamento alto sem clareza sobre rentabilidade real. Este projeto resolve esse problema construindo uma arquitetura de dados completa, do zero, capaz de processar **R$ 53,25 milhões em transações** e entregar KPIs confiáveis para tomada de decisão.
 
-Power BI (DAX, Star Schema)
+---
 
-Automação: 
+## 🛠️ Stack Utilizada
 
-Scripts de Carga Massiva
+| Camada | Tecnologia |
+|--------|-----------|
+| Banco de Dados | Supabase (PostgreSQL) |
+| Engenharia de Dados | Python · Pandas · SQLAlchemy |
+| Visualização | Power BI (DAX · Star Schema) |
+| Automação | Scripts de Carga Massiva |
 
-Infraestrutura e Engenharia (Back-end)
-Aqui está a explicação técnica de cada script desenvolvido no projeto:
+---
 
-1. ![Modelagem do Banco](estrutura_banco.sql)
-Função:
+## 📂 Estrutura do Projeto
 
-Define a arquitetura das tabelas (Produtos, Filiais, Vendas) no Supabase.
+```
+projeto-ecommerce-python/
+│
+├── estrutura_banco.sql       → Modelagem das tabelas e relacionamentos
+├── povoamento_dados.py       → Carga das tabelas dimensionais
+├── sistema_jotta_vendas.py   → Motor de vendas e regras de negócio
+├── carga_massiva.py          → Simulação de escala com milhares de transações
+│
+├── Dashboard_python1.png     → Visão geral financeira
+├── Dashboard_python20.png    → Performance operacional e despesas
+└── Dashboard_python3.png     → Detalhamento de vendas
+```
 
-Destaque Técnico: 
+---
 
-Implementação de chaves primárias e estrangeiras para garantir a integridade referencial, permitindo que o Power BI identifique os relacionamentos automaticamente.
+## ⚙️ Infraestrutura e Engenharia de Dados
 
-2. ![Povoamento Inteligente](povoamento_dados.py)
-Função:
+### 1. `estrutura_banco.sql` — Modelagem do Banco
+Define a arquitetura das tabelas (Produtos, Filiais, Vendas) no Supabase. Implementação de chaves primárias e estrangeiras para garantir integridade referencial, permitindo que o Power BI identifique os relacionamentos automaticamente.
 
-Script Python responsável por alimentar as tabelas dimensionais (Produtos e Filiais).
+[📄 Ver arquivo](./estrutura_banco.sql)
 
-Destaque Técnico: 
+---
 
-Garante que cada produto tenha atributos específicos (preço, categoria) e cada filial tenha seus custos fixos (aluguel, manutenção) devidamente registrados para o cálculo de margem posterior.
+### 2. `povoamento_dados.py` — Povoamento Inteligente
+Script Python responsável por alimentar as tabelas dimensionais (Produtos e Filiais). Garante que cada produto tenha atributos específicos (preço, categoria) e cada filial tenha seus custos fixos (aluguel, manutenção) devidamente registrados para o cálculo de margem posterior.
 
-3. ![Motor de Vendas e Métricas](sistema_jotta_vendas.py)
+[📄 Ver arquivo](./povoamento_dados.py)
 
-Função: 
+---
 
-O "cérebro" da operação. Integra as regras de negócio das métricas de e-commerce com o fluxo de vendas presenciais.
+### 3. `sistema_jotta_vendas.py` — Motor de Vendas e Métricas
+O "cérebro" da operação. Integra as regras de negócio das métricas de e-commerce com o fluxo de vendas. Destaque: cálculo dinâmico de impostos e taxas de entrega antes da carga no banco de dados.
 
+[📄 Ver arquivo](./sistema_jotta_vendas.py)
 
-Destaque Técnico: 
-Cálculo dinâmico de impostos e taxas de entrega antes da carga no banco de dados.
+---
 
-4. ![Simulação de Escala](carga_massiva.py)
-Função:
+### 4. `carga_massiva.py` — Simulação de Escala
+Script de estresse para povoar o banco com milhares de transações reais. Foi através deste script que geramos os **R$ 53,25 milhões em faturamento**, provando que a solução é escalável para grandes volumes.
 
-Script de estresse para povoar o banco com milhares de transações reais.
+[📄 Ver arquivo](./carga_massiva.py)
 
-Destaque Técnico: 
+---
 
-Foi através deste script que geramos os R$ 53,25 Milhões em faturamento, provando que a solução é escalável para grandes volumes de dados.
+## 📊 Dashboards — Resultados Finais
 
-
-📊 Demonstração Visual (Dashboards)
-
-
-Nesta seção, apresento os resultados finais consolidados no Power BI, fruto da integração entre o banco de dados Supabase e os scripts Python de carga massiva.
-
-1. ![Visão Geral Financeira](Dashboard_python1.png)
-
-
+### 1. Visão Geral Financeira
 Foco no monitoramento de KPIs macro: Receita Bruta, Volume de Transações e Lucro Líquido consolidado.
 
-2. ![Performance Operacional e Despesas](Dashboard_python20.png)
+![Dashboard Visão Geral](./Dashboard_python1.png)
 
+---
 
+### 2. Performance Operacional e Despesas
 Análise de custos fixos vs. variáveis, ranking de rentabilidade por estado e eficiência por categoria de produto.
 
-3. ![Detalhamento e Registro de Vendas](Dashboard_python3.png)
+![Dashboard Performance](./Dashboard_python20.png)
 
+---
 
+### 3. Detalhamento e Registro de Vendas
 Visão granular dos dados, exibindo a integridade de cada registro transacional processado pelo sistema.
+
+![Dashboard Detalhamento](./Dashboard_python3.png)
+
+---
+
+## 🔑 Principais Resultados
+
+- ✅ Pipeline end-to-end funcional do banco ao dashboard
+- ✅ R$ 53,25 milhões em faturamento simulado e processado
+- ✅ Star Schema implementado para performance no Power BI
+- ✅ Cálculo automático de impostos, margem e custos fixos por filial
+- ✅ Arquitetura escalável validada com carga massiva de dados
+
+---
+
+## 👤 Autor
+
+**João Marcos** — Data Analyst | Power BI · Python · SQL
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/joão-marcos-347311230)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JottaMarcos)
